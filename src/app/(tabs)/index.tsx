@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { SafeAreaView } from "react-native";
 import { useState, useEffect } from "react";
 
 import WeatherCard from "../../../components/WeatherCard";
@@ -6,18 +6,17 @@ import SearchBox from "../../../components/SearchBox";
 import RiwayatList from "../../../components/RiwayatList";
 
 export default function HalamanUtama() {
-  const [kotaAktif, setKotaAktif] =
-    useState("Pekalongan");
-
-  const [riwayat, setRiwayat] =
-    useState<string[]>(["Pekalongan"]);
+  const [kotaAktif, setKotaAktif] = useState("Pekalongan");
+  const [riwayat, setRiwayat] = useState<string[]>([
+    "Pekalongan",
+  ]);
 
   useEffect(() => {
     console.log(
       "Kota aktif berubah menjadi:",
       kotaAktif
     );
-  }, [kotaAktif]);  
+  }, [kotaAktif]);
 
   function handleCari(kota: string) {
     setKotaAktif(kota);
@@ -28,10 +27,10 @@ export default function HalamanUtama() {
   }
 
   return (
-    <View
+    <SafeAreaView
       style={{
+        flex: 1,
         padding: 16,
-        paddingTop: 50,
         gap: 16,
       }}
     >
@@ -44,6 +43,6 @@ export default function HalamanUtama() {
       />
 
       <RiwayatList daftarKota={riwayat} />
-    </View>
+    </SafeAreaView>
   );
 }
