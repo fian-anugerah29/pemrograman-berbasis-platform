@@ -1,5 +1,8 @@
-import { SafeAreaView } from "react-native-safe-area-context";
+// src/app/(tabs)/index.tsx
+
 import { useState, useEffect } from "react";
+import { useWindowDimensions } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import WeatherCard from "../../../components/WeatherCard";
 import SearchBox from "../../../components/SearchBox";
@@ -10,6 +13,9 @@ export default function HalamanUtama() {
   const [riwayat, setRiwayat] = useState<string[]>([
     "Pekalongan",
   ]);
+
+  const { width } = useWindowDimensions();
+  const isTablet = width > 768;
 
   useEffect(() => {
     console.log(
@@ -30,7 +36,7 @@ export default function HalamanUtama() {
     <SafeAreaView
       style={{
         flex: 1,
-        padding: 16,
+        padding: isTablet ? 32 : 16,
         gap: 16,
       }}
     >
