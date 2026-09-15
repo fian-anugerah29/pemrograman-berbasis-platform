@@ -1,9 +1,9 @@
 import { View } from "react-native";
 import { useState, useEffect } from "react";
 
-import WeatherCard from "../../components/WeatherCard";
-import SearchBox from "../../components/SearchBox";
-import RiwayatList from "../../components/RiwayatList";
+import WeatherCard from "../../../components/WeatherCard";
+import SearchBox from "../../../components/SearchBox";
+import RiwayatList from "../../../components/RiwayatList";
 
 export default function HalamanUtama() {
   const [kotaAktif, setKotaAktif] =
@@ -31,6 +31,7 @@ export default function HalamanUtama() {
     <View
       style={{
         padding: 16,
+        paddingTop: 50,
         gap: 16,
       }}
     >
