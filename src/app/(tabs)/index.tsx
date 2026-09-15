@@ -1,4 +1,4 @@
-import { SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useState, useEffect } from "react";
 
 import WeatherCard from "../../../components/WeatherCard";
