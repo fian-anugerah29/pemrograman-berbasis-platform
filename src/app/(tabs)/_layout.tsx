@@ -17,6 +17,11 @@ export default function TabLayout() {
         name="pengaturan"
         options={{ title: "Pengaturan" }}
       />
+
+      <Tabs.Screen
+        name="tentang"
+        options={{ title: "Tentang" }}
+      />
     </Tabs>
   );
 }
