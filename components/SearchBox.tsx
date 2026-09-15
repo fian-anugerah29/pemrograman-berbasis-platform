@@ -31,6 +31,7 @@ export default function SearchBox({
       <Button
         title="Cari"
         onPress={() => onCari(teks)}
+        accessibilityLabel="Cari cuaca untuk kota yang dimasukkan"
       />
     </View>
   );
